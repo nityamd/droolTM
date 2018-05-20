@@ -77,3 +77,7 @@ table = dynamodb.create_table(
 # Wait until the table exists.
 table.meta.client.get_waiter('table_exists').wait(TableName='login_page_1')
 
+# Print out some data about the table.
+print(table.item_count)
+
+
